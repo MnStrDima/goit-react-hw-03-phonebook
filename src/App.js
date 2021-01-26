@@ -64,7 +64,7 @@ export default class App extends Component {
         <h1 className={styles.title}>Phonebook</h1>
         <ContactForm onSubmit={this.handleSubmit} />
 
-        <h2 className={styles.title}>Contacts:</h2>
+        {contacts.length > 0 && <h2 className={styles.title}>Contacts:</h2>}
         {contacts.length > 1 && (
           <Filter
             initialValue={filter}
